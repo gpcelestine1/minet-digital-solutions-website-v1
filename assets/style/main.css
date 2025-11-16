@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #012665;
 }
 
 /* default style */
@@ -22,6 +23,28 @@
 .align-center {
     align-items: center;
     }
+.justify-space-around{
+    justify-content: space-around;
+}
+.gap-1 {
+    gap: .7rem;
+}
+
+section {
+    padding: 10px 2rem;
+    margin: 20px 0;
+}
+.btn {
+    display: block;
+    background-color: #0000ff;
+    color: #ffffff;
+    text-decoration: none;
+    width: 120px;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+
+}
 
     /* Screen-reader only */
 .sr-only {
@@ -38,8 +61,8 @@ header{
 }
 #logo-container {
     margin-top: 10px;
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border-radius: 8px;
     overflow: hidden;
     }
@@ -135,17 +158,37 @@ header{
     }
 
     /* When open: animate hamburger to X */
-    .nav-toggle[aria-expanded="true"] .hamburger {
+.nav-toggle[aria-expanded="true"] .hamburger {
     transform: rotate(45deg);
     }
-    .nav-toggle[aria-expanded="true"] .hamburger::before {
+.nav-toggle[aria-expanded="true"] .hamburger::before {
     top: 0;
     transform: rotate(90deg);
     }
-    .nav-toggle[aria-expanded="true"] .hamburger::after { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .hamburger::after { opacity: 0; }
 
+/* hero section */
+#hero {
+    flex-direction: column-reverse;
+    background-color: rgb(239, 245, 250);
+    height: 80vh;
+    gap: 1rem;
+}
+.hero-left{
+    width: 100%;
+}
+.hero-right{
+    width: 100%;
+}
+.hero-right .hero-right-img img{
+    width: 100%;
+    object-fit: cover;
+}
     /* Desktop layout */
     @media (min-width: 768px) {
+    section{
+        padding: 10px 7rem;
+    }
     .nav-toggle { display: none; }
     .nav-list {
         position: static;
@@ -167,5 +210,19 @@ header{
     .nav-cta {
         padding: 0.45rem 0.8rem;
         border-radius: 8px;
+    }
+
+    /* hero section */
+    #hero {
+        flex-direction: row;
+        height: 100vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hero-left{
+        width: 40%;
+    }
+    .hero-right{
+        width: 40%;
     }
     }
