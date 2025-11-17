@@ -40,7 +40,7 @@
 }
 section, footer {
     padding: 10px 2rem;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 /* default button setup */
 .btn {
@@ -223,7 +223,7 @@ header{
 /* footer */
 footer {
     background-color: #eff5fa;
-    /* height: 80vh; */
+    min-height: 80vh;
     border-bottom: 20px solid #e6eef8;
 }
 footer a {
@@ -267,6 +267,12 @@ form .btn {
     width: 100%;
     margin-top: 0.2rem;
     border: none;
+}
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #555555;
 }
 
 /* Desktop layout */
