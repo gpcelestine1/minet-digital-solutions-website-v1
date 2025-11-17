@@ -36,7 +36,7 @@
     gap: 1.4rem;
 }
 .gap-3 {
-    gap: 2rem;
+    gap: 1.7rem;
 }
 section, footer {
     padding: 10px 2rem;
@@ -52,13 +52,16 @@ section, footer {
     padding: 8px;
     border-radius: 10px;
     text-align: center;
-
 }
+/* footer contact btn */
 .contact-btn {
     border: 1px solid #0000ff;
     padding: 8px;
     border-radius: 10px;
     cursor: pointer;
+    display: inline-block;
+    width: 220px;
+    text-align: center;
 }
 
     /* Screen-reader only */
@@ -189,6 +192,7 @@ header{
     height: 80vh;
     gap: 1rem;
     border-top: 7px solid #e6eef8;
+    border-bottom: 20px solid #e6eef8;
 }
 .hero-left{
     width: 100%;
@@ -224,14 +228,15 @@ header{
 footer {
     background-color: #eff5fa;
     min-height: 80vh;
-    border-bottom: 20px solid #e6eef8;
+    border-top: 15px solid #e6eef8;
+    border-bottom: 20px solid #0f014d;
 }
 footer a {
     text-decoration: none;
 }
 
 .email-phone div p{
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
 }
 
 /* Footer contact form */
@@ -242,9 +247,11 @@ footer a {
     margin-bottom: 0.6rem;
 }
 
+.contact-form {
+    width: calc(100% - 3rem);
+}
 form input,
 form textarea {
-    width: 100%;
     padding: 0.65rem;
     border: none;
     border-radius: 6px;
@@ -327,8 +334,85 @@ form .btn {
 
     .contact {
         flex-direction: row;
+        margin-top: 3rem;
     }
-    form input{
-        width: 400px;
+    .contact-form {
+        width: 40%;
     }
+    form input, form textarea, form button{
+        width: 100%;
+    }
+    footer {
+        gap: 5rem;
+    }
+ }
+
+    @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+        /* slightly tighter padding for tablet */
+        section, footer {
+            padding: 10px 4rem;
+        }
+
+        header {
+            gap: 1rem;
+        }
+
+        /* hero adjustments for iPad */
+        #hero {
+            flex-direction: row;
+            height: 60vh;
+            align-items: center;
+            gap: 1rem;
+        }
+        .hero-left { width: 55%; }
+        .hero-right { width: 42%; }
+        .hero-right .hero-right-img img {
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* card layout: two-up grid */
+        .card-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            width: 48%;
+            margin: 0.6rem 0;
+        }
+
+        /* navigation tweaks for readability */
+        .nav-list {
+            gap: 0.75rem;
+        }
+        .nav-link {
+            font-size: 0.98rem;
+            padding: 0.4rem 0.6rem;
+        }
+
+        /* contact / form sizing */
+        .contact {
+            flex-direction: row;
+            gap: 1rem;
+        }
+        .contact-form {
+            width: 100%;
+            max-width: 520px;
+        }
+        form input,
+        form textarea {
+            font-size: 0.96rem;
+        }
+        form input {
+            width: 100%;
+            max-width: 360px;
+        }
+
+        /* footer adjustments */
+        .copyright {
+            text-align: left;
+        }
     }
